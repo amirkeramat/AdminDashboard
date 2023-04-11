@@ -1,0 +1,7 @@
+.side-bar{
+    height: calc(100% - 50px);
+}
+
+.sideBar-listItem.active , .sideBar-listItem:hover{
+    background-color: rgb(240, 240, 255);
+}
