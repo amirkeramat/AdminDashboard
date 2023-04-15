@@ -10,9 +10,9 @@ import {
 import './Chart.css'
 const Chart = ({ title, data, dataKey, grid }) => {
   return (
-    <div className='chart'>
-      <h3 className='chartTitle'>{title}</h3>
-      <ResponsiveContainer width='100%'  aspect={4}>
+    <div className="flex flex-1 items-start justify-center h-[300px] w-full">
+       <div className='chart w-full h-full max-h-[300px] p-1  m-auto'>
+      <ResponsiveContainer width='100%' height='100%' >
         <LineChart
           width={600}
           height={100}
@@ -25,6 +25,8 @@ const Chart = ({ title, data, dataKey, grid }) => {
         </LineChart>
       </ResponsiveContainer>
     </div>
+    </div>
+   
   );
 };
 

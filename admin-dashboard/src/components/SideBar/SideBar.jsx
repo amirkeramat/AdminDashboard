@@ -1,15 +1,29 @@
 import React from "react";
 import "./SideBar.css";
 
-import  {LineStyleIcon,TimelineIcon,TrendingUpIcon,PermIdentityIcon,StorefrontIcon,AttachMoneyIcon,BarChartIcon,MailOutlineIcon,DynamicFeedIcon,ChatBubbleOutlineIcon,MessageOutlinedIcon,WorkOutlineIcon,ReportIcon,
-} from '../../icons'
+import {
+  LineStyleIcon,
+  TimelineIcon,
+  TrendingUpIcon,
+  PermIdentityIcon,
+  StorefrontIcon,
+  AttachMoneyIcon,
+  BarChartIcon,
+  MailOutlineIcon,
+  DynamicFeedIcon,
+  ChatBubbleOutlineIcon,
+  MessageOutlinedIcon,
+  WorkOutlineIcon,
+  ReportIcon,
+  MenuIcon,
+} from "../../icons";
 import { Link } from "react-router-dom";
 
 const SideBar = () => {
   return (
-    <div className='side-bar flex-1 sticky top-[50px]'>
-      <div className='sideBar-wrapper p-[20px] text-[#555] h-full'>
-        <div className='sideBar-menu mb-[10px]'>
+    <div className='side-bar sticky top-[50px]'>
+      <div className='sideBar-wrapper p-[20px] text-[#555] h-screen bg-gray-200 hidden md:block'>
+        <div className='sideBar-menu mb-[10px] '>
           <h3 className='sideBar-title text-[13px] text-slate-400'>
             Dashboard
           </h3>
@@ -115,6 +129,9 @@ const SideBar = () => {
             </li>
           </ul>
         </div>
+      </div>
+      <div className='sideBar-wrapper p-[20px] text-[#555] h-full bg-gray-300 block md:hidden'>
+        <MenuIcon />
       </div>
     </div>
   );

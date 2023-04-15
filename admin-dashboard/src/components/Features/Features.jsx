@@ -3,9 +3,9 @@ import "./Features.css";
 import { ArrowDownwardIcon, ArrowUpwardIcon } from "../../icons";
 const Features = () => {
   return (
-    <div className='features flex items-start'>
+    <div className='features'>
       <div className='featuresContainer flex justify-between flex-wrap w-full'>
-        <div className='featureItem'>
+        <div className='featureItem flex-1'>
           <span className='featureTitle'>Revenue</span>
           <div className='featurePrice'>
             <span className='featureMoney'>$2,415</span>
@@ -17,7 +17,7 @@ const Features = () => {
           <span className='featureSub'>Compered to the last month</span>
         </div>
 
-        <div className='featureItem'>
+        <div className='featureItem flex-1'>
           <span className='featureTitle'>Sales</span>
           <div className='featurePrice'>
             <span className='featureMoney'>$4,415</span>
@@ -29,7 +29,7 @@ const Features = () => {
           <span className='featureSub'>Compered to the last month</span>
         </div>
 
-        <div className='featureItem'>
+        <div className='featureItem flex-1'>
           <span className='featureTitle'>Cost</span>
           <div className='featurePrice'>
             <span className='featureMoney'>$2,225</span>

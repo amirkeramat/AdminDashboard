@@ -13,6 +13,7 @@ import WorkOutlineIcon from "@mui/icons-material/WorkOutline";
 import ReportIcon from "@mui/icons-material/WorkOutline";
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
+import MenuIcon from '@mui/icons-material/Menu';
+import VisibilityIcon from '@mui/icons-material/Visibility';
 
-export {LineStyleIcon,TimelineIcon,TrendingUpIcon,PermIdentityIcon,StorefrontIcon,AttachMoneyIcon,BarChartIcon,MailOutlineIcon,DynamicFeedIcon,ChatBubbleOutlineIcon,MessageOutlinedIcon,WorkOutlineIcon,ReportIcon,ArrowDownwardIcon,ArrowUpwardIcon
-}
+export {LineStyleIcon,TimelineIcon,TrendingUpIcon,PermIdentityIcon,StorefrontIcon,AttachMoneyIcon,BarChartIcon,MailOutlineIcon,DynamicFeedIcon,ChatBubbleOutlineIcon,MessageOutlinedIcon,WorkOutlineIcon,ReportIcon,ArrowDownwardIcon,ArrowUpwardIcon,VisibilityIcon,MenuIcon}
