@@ -6,8 +6,8 @@ const WidgetLg = () => {
     return <button className={"widgetLgButton  " + type}>{type}</button>;
   };
   return (
-    <div className='widgetLg-container flex-[2] mt-5 px-4 py-2'>
-      <table className='widgetLgTable w-full'>
+    <div className='widgetLg-container flex-[2] mt-5 px-4 py-2 w-full '>
+      <table className='widgetLgTable w-full '>
         <caption className=' caption-top  font-bold text-lg'>
           Latest TransActions
         </caption>
@@ -21,14 +21,16 @@ const WidgetLg = () => {
         </thead>
         <tbody>
           {transactions.map((transaction) => (
-            <tr key={transaction.id} className='widgetLgTr bg-white border odd:bg-gray-100 '>
-              <td className='widgetLgUser flex items-center '>
+            <tr
+              key={transaction.id}
+              className='widgetLgTr bg-white border odd:bg-gray-100 '>
+              <td className='widgetLgUser flex-col sm:flex-row items-center justify-center '>
                 <img
                   src={transaction.img}
                   alt=''
                   className='w-[40px] h-[40px] rounded-full object-cover object-center'
                 />
-                <h3 className="ms-2">{transaction.costumer}</h3>
+                <h3 className='ms-2'>{transaction.costumer}</h3>
               </td>
               <td className='widgetLgDate'>{transaction.date}</td>
               <td className='widgetLgAmount'>${transaction.amount}</td>
