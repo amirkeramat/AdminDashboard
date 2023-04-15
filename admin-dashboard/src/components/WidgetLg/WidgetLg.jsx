@@ -24,7 +24,7 @@ const WidgetLg = () => {
             <tr
               key={transaction.id}
               className='widgetLgTr bg-white border odd:bg-gray-100 '>
-              <td className='widgetLgUser flex-col sm:flex-row items-center justify-center '>
+              <td className='widgetLgUser flex flex-col sm:flex-row items-center  '>
                 <img
                   src={transaction.img}
                   alt=''
