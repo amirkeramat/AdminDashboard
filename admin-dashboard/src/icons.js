@@ -15,5 +15,7 @@ import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import MenuIcon from '@mui/icons-material/Menu';
 import VisibilityIcon from '@mui/icons-material/Visibility';
+import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline'
 
-export {LineStyleIcon,TimelineIcon,TrendingUpIcon,PermIdentityIcon,StorefrontIcon,AttachMoneyIcon,BarChartIcon,MailOutlineIcon,DynamicFeedIcon,ChatBubbleOutlineIcon,MessageOutlinedIcon,WorkOutlineIcon,ReportIcon,ArrowDownwardIcon,ArrowUpwardIcon,VisibilityIcon,MenuIcon}
+
+export {LineStyleIcon,TimelineIcon,TrendingUpIcon,PermIdentityIcon,StorefrontIcon,AttachMoneyIcon,BarChartIcon,MailOutlineIcon,DynamicFeedIcon,ChatBubbleOutlineIcon,MessageOutlinedIcon,WorkOutlineIcon,ReportIcon,ArrowDownwardIcon,ArrowUpwardIcon,VisibilityIcon,MenuIcon,DeleteOutlineIcon}
