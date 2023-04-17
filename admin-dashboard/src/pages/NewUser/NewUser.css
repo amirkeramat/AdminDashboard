@@ -1,0 +1,14 @@
+.formContainer{
+        box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+        padding: 50px;
+}
+.formContainer label{
+        box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+        width: 100%;
+}
+.formContainer input[type=text]{
+        outline: none;
+        border-bottom: 2px solid gray;
+        width: 100%;
+        padding: 5px;
+}

@@ -4,9 +4,22 @@ import routes from './routes'
 import TopBar from './components/TopBar/TopBar'
 import SideBar from './components/SideBar/SideBar'
 import { Container } from '@mui/material'
+import { xAxisData, newUsers, transactions, userRows, products } from "./datas";
 function App() {
 let router = useRoutes(routes)
-
+  const fetchData = ()=>{
+    fetch(
+      "https://admin-dashboard-95d81-default-rtdb.firebaseio.com/newUsers.json",
+      {
+        method: "POST",
+        body: JSON.stringify(newUsers),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    ).then((res) => console.log(res));
+  }
+  // fetchData()
   return (
     <Container>
 
