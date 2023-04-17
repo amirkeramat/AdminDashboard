@@ -1,20 +1,36 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { DataGrid } from "@mui/x-data-grid";
 import { Box } from "@mui/material";
-import { products } from "../../datas";
 import { Link } from "react-router-dom";
 import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
+import useGetData from "../../hooks/useGetData";
+import loadingLogo from "/images/Infinity-1s-200px.svg";
+
+
 const Products = () => {
-  const [productsData, setProductsData] = useState(products);
+  const  [productsData, setProductsData ] = useGetData("products");
+  // useEffect(() => {
+  //   const sendData = async () => {
+  //     const { data, error } = await supabase
+  //       .from("products")
+  //       .insert(productsData);
+  //     if (error) {
+  //       console.log(error);
+  //     }
+  //   };
+  //   sendData();
+  // }, [productsData]);
 
   const productDelete = (productID) => {
-    setProductsData(productsData.filter((product) => product.id != productID));
+    setProductsData(
+      productsData.filter((product) => product.user_id != productID)
+    );
   };
 
   const columns = [
     {
-      field: "id",
+      field: "user_id",
       headerName: "ID",
       width: 90,
     },
@@ -24,7 +40,7 @@ const Products = () => {
       width: 200,
       renderCell: (params) => {
         return (
-          <Link to={`/product/${params.row.id}`} className='link'>
+          <Link to={`/product/${params.row.user_id}`} className='link'>
             <div className='userListUser flex items-center'>
               <img
                 src={params.row.avatar}
@@ -48,12 +64,12 @@ const Products = () => {
       renderCell: (params) => {
         return (
           <div className='flex items-center'>
-            <Link to={`/product/${params.row.id}`} className='link'>
+            <Link to={`/product/${params.row.user_id}`} className='link'>
               <button className='px-3 py-1 bg-green-400 rounded'>Edit</button>
             </Link>
             <DeleteOutlineIcon
               className='text-red-400 cursor-pointer'
-              onClick={() => productDelete(params.row.id)}
+              onClick={() => productDelete(params.row.user_id)}
             />
           </div>
         );
@@ -62,20 +78,30 @@ const Products = () => {
   ];
 
   return (
-    <Box sx={{ height: 600, width: "100%" }}>
-      <DataGrid
-        rows={productsData}
-        columns={columns}
-        initialState={{
-          pagination: {
-            paginationModel: {
-              pageSize: 3,
-            },
-          },
-        }}
-        checkboxSelection
-      />
-    </Box>
+    <>
+      {productsData && (
+        <Box sx={{ height: 600, width: "100%" }}>
+          <DataGrid
+            rows={productsData}
+            columns={columns}
+            initialState={{
+              pagination: {
+                paginationModel: {
+                  pageSize: 3,
+                },
+              },
+            }}
+            checkboxSelection
+          />
+        </Box>
+      )}
+      {productsData === null && (
+        <div className='flex justify-center items-center flex-[4]'>
+          <img src={loadingLogo} alt='' />
+          <h1 className='text-3xl text-sky-500'>Loading Please Waite...</h1>
+        </div>
+      )}
+    </>
   );
 };
 

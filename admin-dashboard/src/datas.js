@@ -28,7 +28,7 @@ const transactions = [
 ]
 let userRows = [
     {
-        id: 1,
+        user_id: 1,
         username: 'Qadir Yolme',
         avatar: 'images/about-me.jpg',
         status: 'active',
@@ -36,7 +36,7 @@ let userRows = [
         email: 'amin@gmail.com'
     },
     {
-        id: 2,
+        user_id: 2,
         username: 'Amin Saeedi',
         avatar: 'images/about-me.jpg',
         status: 'non-active',
@@ -44,7 +44,7 @@ let userRows = [
         email: 'amin@gmail.com'
     },
     {
-        id: 3,
+        user_id: 3,
         username: 'Sasan Moq',
         avatar: 'images/about-me.jpg',
         status: 'active',
@@ -52,7 +52,7 @@ let userRows = [
         email: 'amin@gmail.com'
     },
     {
-        id: 4,
+        user_id: 4,
         username: 'Zahra Agayi',
         avatar: 'images/about-me.jpg',
         status: 'active',
@@ -60,7 +60,7 @@ let userRows = [
         email: 'amin@gmail.com'
     },
     {
-        id: 5,
+        user_id: 5,
         username: 'Hamze mohammadi',
         avatar: 'images/about-me.jpg',
         status: 'active',
@@ -71,25 +71,25 @@ let userRows = [
 
 let products = [
     {
-        id: 1,
+        user_id: 1,
         title: 'Asus',
         avatar: 'images/asus.jpeg',
         price: 890
     },
     {
-        id: 2,
+        user_id: 2,
         title: 'Acer',
         avatar: 'images/acer.jpg',
         price: 890
     },
     {
-        id: 3,
+        user_id: 3,
         title: 'HP',
         avatar: 'images/hp.jpg',
         price: 890
     },
     {
-        id: 4,
+        user_id: 4,
         title: 'Dell',
         avatar: 'images/dell.jpg',
         price: 890
