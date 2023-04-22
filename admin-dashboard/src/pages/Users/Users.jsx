@@ -61,7 +61,7 @@ const Users = () => {
           initialState={{
             pagination: {
               paginationModel: {
-                pageSize: 2,
+                pageSize:4,
               },
             },
           }}

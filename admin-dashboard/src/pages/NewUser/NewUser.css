@@ -12,3 +12,35 @@
         width: 100%;
         padding: 5px;
 }
+
+.showModal{
+        right:15vh !important;
+        top:15vh !important;
+}
+.modal{
+box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+filter: drop-shadow(1px 1px  4px rgb(38, 255, 0));
+}
+.progressBar{
+        margin-top: 20px;
+        width: 80%;
+        height: 10px;
+        background-color: #ffff;
+        border-radius: 10px;
+}
+.loading{
+        width: 80%;
+        height: 10px;
+        border-radius: 10px;
+        animation-name: loadingBar;
+        animation-timing-function: linear;
+        animation-duration: 5s;
+        background-color: rgb(26, 245, 26);
+}
+@keyframes loadingBar {
+        0% {width: 0;}
+        25%{width: 25%;}
+        50%{width: 50%;}
+        75%{width:75%;}
+        100%{width:100%;}
+}
