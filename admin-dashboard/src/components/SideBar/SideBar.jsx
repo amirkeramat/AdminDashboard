@@ -83,6 +83,13 @@ const SideBar = () => {
                 </li>
               </Link>
 
+              <Link to='/newProduct'>
+                <li className='sideBar-listItem px-[10px] py-[5px] cursor-pointer flex items-center rounded-[10px]'>
+                  <AttachMoneyIcon className='text-[20px] mr-[5px]' />
+                  NewProduct
+                </li>
+              </Link>
+
               <li className='sideBar-listItem px-[10px] py-[5px] cursor-pointer flex items-center rounded-[10px]'>
                 <BarChartIcon className='text-[20px] mr-[5px]' />
                 TransActions
