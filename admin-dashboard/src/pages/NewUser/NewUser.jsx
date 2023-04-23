@@ -11,11 +11,9 @@ const NewUser = () => {
   const [showModal, setShowModal] = useState(false);
   useEffect(()=>{
     setDatas(UpdatedData)
-    console.log('update user');
   },[UpdatedData])
   useEffect(()=>{
     setDatas(userDatas)
-    console.log('datas fetched');
   },[])
   const SuccessModal = () => {
     return (
@@ -44,7 +42,6 @@ const NewUser = () => {
       if (error) {
         console.log(error);
       } else {
-        console.log("s");
         setShowModal(true);
         setIsNewData(NewUser)
         setTimeout(() => {

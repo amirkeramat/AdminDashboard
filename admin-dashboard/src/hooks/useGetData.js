@@ -10,7 +10,6 @@ const useGetData = (table,changed) => {
       }
       if (data) {
         setDatas(data);
-        console.log(changed,'get data');
       }
     };
     getData();
