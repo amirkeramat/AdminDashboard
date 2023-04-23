@@ -52,9 +52,9 @@ const Users = () => {
     setUserDatas(userDatas.filter(user=>user.user_id != userId ))
   }
   return (
-    <>
+    <div className="flex-[4]">
       {userDatas && (
-    <Box sx={{ height: 600, width: "80%" }}>
+    <Box sx={{ height: 600, width: "100%" }}>
         <DataGrid
         rows={userDatas}
           columns={columns}
@@ -76,7 +76,7 @@ const Users = () => {
           <h1 className="text-3xl text-sky-500">Loading Please Waite...</h1>
         </div>
       )}
-        </>
+        </div>
   );
 };
 

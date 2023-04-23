@@ -78,9 +78,9 @@ const Products = () => {
   ];
 
   return (
-    <>
+    <div className="flex-[4]">
       {productsData && (
-        <Box sx={{ height: 600, width: "80%" }}>
+        <Box sx={{ height: 600, width: "100%" }}>
           <DataGrid
             rows={productsData}
             columns={columns}
@@ -101,7 +101,7 @@ const Products = () => {
           <h1 className='text-3xl text-sky-500'>Loading Please Waite...</h1>
         </div>
       )}
-    </>
+    </div>
   );
 };
 
