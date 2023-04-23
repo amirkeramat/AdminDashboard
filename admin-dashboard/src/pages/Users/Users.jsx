@@ -6,7 +6,7 @@ import { DeleteOutlineIcon } from "../../icons";
 import useGetData from "../../hooks/useGetData";
 import loadingLogo from "/images/Infinity-1s-200px.svg";
 const Users = () => {
-  const [userDatas, setUserDatas] = useGetData('users');
+  const [userDatas, setUserDatas] = useGetData('users',[]);
 
   const columns = [
     { field: "user_id", headerName: "ID", width:5 },

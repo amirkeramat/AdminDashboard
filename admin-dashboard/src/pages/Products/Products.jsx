@@ -9,7 +9,7 @@ import loadingLogo from "/images/Infinity-1s-200px.svg";
 
 
 const Products = () => {
-  const  [productsData, setProductsData ] = useGetData("products");
+  const  [productsData, setProductsData ] = useGetData("products",[]);
   // useEffect(() => {
   //   const sendData = async () => {
   //     const { data, error } = await supabase
