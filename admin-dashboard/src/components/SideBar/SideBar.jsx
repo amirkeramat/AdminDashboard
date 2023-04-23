@@ -29,7 +29,7 @@ const SideBar = () => {
         <MenuIcon className="text-white" />
       </div>
       <div
-        className={`side-bar overflow-y-auto bg-gray-100 fixed lg:sticky top-[50px] transition-all  z-20  flex-1
+        className={`side-bar overflow-y-auto bg-gray-100 fixed lg:sticky top-[50px] transition-all  z-10 flex-1 md:h-screen
         ${toggle ? "left-0" : "-left-[200px]"}`}>
         <div className={`sideBar-wrapper p-[20px] text-[#555]`}>
           <div className='sideBar-menu mb-[10px] '>

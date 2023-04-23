@@ -78,7 +78,7 @@ const Products = () => {
   ];
 
   return (
-    <div className="flex-[4]">
+    <div className="flex-[4] w-full">
       {productsData && (
         <Box sx={{ height: 600, width: "100%" }}>
           <DataGrid

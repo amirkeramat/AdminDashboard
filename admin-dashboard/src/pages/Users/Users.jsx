@@ -52,7 +52,7 @@ const Users = () => {
     setUserDatas(userDatas.filter(user=>user.user_id != userId ))
   }
   return (
-    <div className="flex-[4]">
+    <div className="flex-[4] w-full">
       {userDatas && (
     <Box sx={{ height: 600, width: "100%" }}>
         <DataGrid
