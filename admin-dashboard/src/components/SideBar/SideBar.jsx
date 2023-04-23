@@ -22,117 +22,125 @@ import { Link } from "react-router-dom";
 const SideBar = () => {
   const [toggle, setToggle] = useState(false);
   return (
-    <div className={`side-bar sticky top-[50px]  flex-[1]`}>
+    <>
       <div
-        className={`sideBar-wrapper p-[20px] text-[#555] hidden lg:block`}>
-        <div className='sideBar-menu mb-[10px] '>
-          <h3 className='sideBar-title text-[13px] text-slate-400'>
-            Dashboard
-          </h3>
+        onClick={() => setToggle((prv) => !prv)}
+        className=' fixed bg-gray-800 z-20   top-0  h-[50px] flex items-center cursor-pointer lg:hidden'>
+        <MenuIcon className="text-white" />
+      </div>
+      <div
+        className={`side-bar overflow-y-auto bg-gray-100 fixed lg:sticky top-[50px] transition-all  z-20  flex-1
+        ${toggle ? "left-0" : "-left-[200px]"}`}>
+        <div className={`sideBar-wrapper p-[20px] text-[#555]`}>
+          <div className='sideBar-menu mb-[10px] '>
+            <h3 className='sideBar-title text-[13px] text-slate-400'>
+              Dashboard
+            </h3>
 
-          <ul className='sideBar-List p-[5px]'>
-            <Link to='/'>
-              <li className='sideBar-listItem  px-[10px] py-[5px] cursor-pointer flex items-center rounded-[10px]  active'>
-                <LineStyleIcon className='text-[20px] mr-[5px]' />
-                Home
-              </li>
-            </Link>
+            <ul className='sideBar-List p-[5px]'>
+              <Link to='/'>
+                <li className='sideBar-listItem  px-[10px] py-[5px] cursor-pointer flex items-center rounded-[10px]  active'>
+                  <LineStyleIcon className='text-[20px] mr-[5px]' />
+                  Home
+                </li>
+              </Link>
 
-            <li className='sideBar-listItem px-[10px] py-[5px] cursor-pointer flex items-center rounded-[10px]'>
-              <TimelineIcon className='text-[20px] mr-[5px]' />
-              Analytics
-            </li>
-
-            <li className='sideBar-listItem px-[10px] py-[5px] cursor-pointer flex items-center rounded-[10px]'>
-              <TrendingUpIcon className='text-[20px] mr-[5px]' />
-              Sales
-            </li>
-          </ul>
-        </div>
-
-        <div className='sideBar-menu mb-[10px]'>
-          <h3 className='sideBar-title text-[13px] text-slate-400'>
-            Quick Menu
-          </h3>
-          <ul className='sideBar-List p-[5px]'>
-            <Link to='/users'>
-              <li className='sideBar-listItem  px-[10px] py-[5px] cursor-pointer flex items-center rounded-[10px]'>
-                <PermIdentityIcon className='text-[20px] mr-[5px]' />
-                Users
-              </li>
-            </Link>
-
-            <Link to='/newUser'>
               <li className='sideBar-listItem px-[10px] py-[5px] cursor-pointer flex items-center rounded-[10px]'>
-                <StorefrontIcon className='text-[20px] mr-[5px]' />
-                New User
+                <TimelineIcon className='text-[20px] mr-[5px]' />
+                Analytics
               </li>
-            </Link>
 
-            <Link to='/products'>
               <li className='sideBar-listItem px-[10px] py-[5px] cursor-pointer flex items-center rounded-[10px]'>
-                <AttachMoneyIcon className='text-[20px] mr-[5px]' />
-                Products
+                <TrendingUpIcon className='text-[20px] mr-[5px]' />
+                Sales
               </li>
-            </Link>
+            </ul>
+          </div>
 
-            <li className='sideBar-listItem px-[10px] py-[5px] cursor-pointer flex items-center rounded-[10px]'>
-              <BarChartIcon className='text-[20px] mr-[5px]' />
-              TransActions
-            </li>
+          <div className='sideBar-menu mb-[10px]'>
+            <h3 className='sideBar-title text-[13px] text-slate-400'>
+              Quick Menu
+            </h3>
+            <ul className='sideBar-List p-[5px]'>
+              <Link to='/users'>
+                <li className='sideBar-listItem  px-[10px] py-[5px] cursor-pointer flex items-center rounded-[10px]'>
+                  <PermIdentityIcon className='text-[20px] mr-[5px]' />
+                  Users
+                </li>
+              </Link>
 
-            <li className='sideBar-listItem px-[10px] py-[5px] cursor-pointer flex items-center rounded-[10px]'>
-              <MailOutlineIcon className='text-[20px] mr-[5px]' />
-              Reports
-            </li>
-          </ul>
-        </div>
+              <Link to='/newUser'>
+                <li className='sideBar-listItem px-[10px] py-[5px] cursor-pointer flex items-center rounded-[10px]'>
+                  <StorefrontIcon className='text-[20px] mr-[5px]' />
+                  New User
+                </li>
+              </Link>
 
-        <div className='sideBar-menu mb-[10px]'>
-          <h3 className='sideBar-title text-[13px] text-slate-400'>
-            Notifications
-          </h3>
+              <Link to='/products'>
+                <li className='sideBar-listItem px-[10px] py-[5px] cursor-pointer flex items-center rounded-[10px]'>
+                  <AttachMoneyIcon className='text-[20px] mr-[5px]' />
+                  Products
+                </li>
+              </Link>
 
-          <ul className='sideBar-List p-[5px]'>
-            <li className='sideBar-listItem  px-[10px] py-[5px] cursor-pointer flex items-center rounded-[10px] '>
-              <DynamicFeedIcon className='text-[20px] mr-[5px]' />
-              Mail
-            </li>
+              <li className='sideBar-listItem px-[10px] py-[5px] cursor-pointer flex items-center rounded-[10px]'>
+                <BarChartIcon className='text-[20px] mr-[5px]' />
+                TransActions
+              </li>
 
-            <li className='sideBar-listItem px-[10px] py-[5px] cursor-pointer flex items-center rounded-[10px]'>
-              <ChatBubbleOutlineIcon className='text-[20px] mr-[5px]' />
-              FeedBack
-            </li>
+              <li className='sideBar-listItem px-[10px] py-[5px] cursor-pointer flex items-center rounded-[10px]'>
+                <MailOutlineIcon className='text-[20px] mr-[5px]' />
+                Reports
+              </li>
+            </ul>
+          </div>
 
-            <li className='sideBar-listItem px-[10px] py-[5px] cursor-pointer flex items-center rounded-[10px]'>
-              <MessageOutlinedIcon className='text-[20px] mr-[5px]' />
-              Messages
-            </li>
-          </ul>
-        </div>
+          <div className='sideBar-menu mb-[10px]'>
+            <h3 className='sideBar-title text-[13px] text-slate-400'>
+              Notifications
+            </h3>
 
-        <div className='sideBar-menu mb-[10px]'>
-          <h3 className='sideBar-title text-[13px] text-slate-400'>Staff</h3>
+            <ul className='sideBar-List p-[5px]'>
+              <li className='sideBar-listItem  px-[10px] py-[5px] cursor-pointer flex items-center rounded-[10px] '>
+                <DynamicFeedIcon className='text-[20px] mr-[5px]' />
+                Mail
+              </li>
 
-          <ul className='sideBar-List p-[5px]'>
-            <li className='sideBar-listItem  px-[10px] py-[5px] cursor-pointer flex items-center rounded-[10px] '>
-              <WorkOutlineIcon className='text-[20px] mr-[5px]' />
-              Manage
-            </li>
+              <li className='sideBar-listItem px-[10px] py-[5px] cursor-pointer flex items-center rounded-[10px]'>
+                <ChatBubbleOutlineIcon className='text-[20px] mr-[5px]' />
+                FeedBack
+              </li>
 
-            <li className='sideBar-listItem px-[10px] py-[5px] cursor-pointer flex items-center rounded-[10px]'>
-              <TimelineIcon className='text-[20px] mr-[5px]' />
-              Analytics
-            </li>
+              <li className='sideBar-listItem px-[10px] py-[5px] cursor-pointer flex items-center rounded-[10px]'>
+                <MessageOutlinedIcon className='text-[20px] mr-[5px]' />
+                Messages
+              </li>
+            </ul>
+          </div>
 
-            <li className='sideBar-listItem px-[10px] py-[5px] cursor-pointer flex items-center rounded-[10px]'>
-              <ReportIcon className='text-[20px] mr-[5px]' />
-              Reports
-            </li>
-          </ul>
+          <div className='sideBar-menu mb-[10px]'>
+            <h3 className='sideBar-title text-[13px] text-slate-400'>Staff</h3>
+
+            <ul className='sideBar-List p-[5px]'>
+              <li className='sideBar-listItem  px-[10px] py-[5px] cursor-pointer flex items-center rounded-[10px] '>
+                <WorkOutlineIcon className='text-[20px] mr-[5px]' />
+                Manage
+              </li>
+
+              <li className='sideBar-listItem px-[10px] py-[5px] cursor-pointer flex items-center rounded-[10px]'>
+                <TimelineIcon className='text-[20px] mr-[5px]' />
+                Analytics
+              </li>
+
+              <li className='sideBar-listItem px-[10px] py-[5px] cursor-pointer flex items-center rounded-[10px]'>
+                <ReportIcon className='text-[20px] mr-[5px]' />
+                Reports
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

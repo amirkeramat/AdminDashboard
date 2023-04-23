@@ -80,7 +80,7 @@ const Products = () => {
   return (
     <>
       {productsData && (
-        <Box sx={{ height: 600, width: "100%" }}>
+        <Box sx={{ height: 600, width: "80%" }}>
           <DataGrid
             rows={productsData}
             columns={columns}

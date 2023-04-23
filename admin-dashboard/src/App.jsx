@@ -23,7 +23,7 @@ function App() {
     <Container>
       <div className='App'>
         <TopBar />
-        <div className='flex justify-around mt-[10px] relative'>
+        <div className='flex justify-between mt-[10px] relative'>
           <SideBar />
           {router}
         </div>

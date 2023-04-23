@@ -1,15 +1,26 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useMemo } from "react";
 import "./NewUser.css";
 import supabase from "../../config/supabaseClient";
 import useGetData from "../../hooks/useGetData";
 import loadingLogo from "/images/Infinity-1s-200px.svg";
 const NewUser = () => {
-  const [userDatas, setUserDatas] = useGetData("users");
+  const [userDatas] = useGetData("users",[]);
+  const [datas,setDatas] = useState([])
+  const [isNewData,setIsNewData] = useState(null)
+  const [UpdatedData] = useGetData('users',[isNewData])
   const [showModal, setShowModal] = useState(false);
+  useEffect(()=>{
+    setDatas(UpdatedData)
+    console.log('update user');
+  },[UpdatedData])
+  useEffect(()=>{
+    setDatas(userDatas)
+    console.log('datas fetched');
+  },[])
   const SuccessModal = () => {
     return (
       <div
-        className={`modal fixed top-[100px]  w-[400px] h-[100px] bg-gray-100 border border-green-400 text-3xl rounded-2xl flex flex-col justify-center items-center transition-all -right-[10000px] text-gray-900 ${
+        className={`modal fixed top-[100px] md:w-[400px]   w-full h-[100px]  text-2xl rounded-2xl flex flex-col justify-center items-center transition-all -right-[10000px] text-gray-500 ${
           showModal && "showModal"
         }`}>
         <h1>Add User Successfully</h1>
@@ -22,7 +33,7 @@ const NewUser = () => {
   const submitHandler = async (e) => {
     e.preventDefault();
     const NewUser = {
-      user_id: userDatas.length + 1,
+      user_id: datas.length + 1,
       username: userUsername,
       password: userPassword,
       email: userEmail,
@@ -35,6 +46,7 @@ const NewUser = () => {
       } else {
         console.log("s");
         setShowModal(true);
+        setIsNewData(NewUser)
         setTimeout(() => {
           setShowModal(false);
         }, 5000);
@@ -57,10 +69,10 @@ const NewUser = () => {
   const [userAvatar, setUserAvatar] = useState("");
   const [userJob, setUserJob] = useState("");
   return (
-    <div className='flex-[4]'>
+    <>
       {showModal && <SuccessModal />}
-      {userDatas ? (
-        <div className='formContainer'>
+      {datas ? (
+        <div className='formContainer flex-[4]'>
           <form
             onSubmit={submitHandler}
             className='flex space-y-10 flex-wrap flex-auto'>
@@ -131,12 +143,12 @@ const NewUser = () => {
           </form>
         </div>
       ) : (
-        <div className='flex justify-center items-center flex-[4]'>
+        <div className='flex flex-[4] justify-center items-center'>
           <img src={loadingLogo} alt='' />
           <h1 className='text-3xl text-sky-500'>Loading Please Waite...</h1>
         </div>
       )}
-    </div>
+    </>
   );
 };
 

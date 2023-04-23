@@ -4,7 +4,7 @@ import LanguageIcon from "@mui/icons-material/Language";
 import SettingsIcon from "@mui/icons-material/Settings";
 const TopBar = () => {
   return (
-    <div className='top-bar w-full h-[50px] sticky top-0 z-50 bg-gray-800 bg-opacity-20 '>
+    <div className='top-bar z-[10] w-full h-[50px] sticky top-0 z-50 bg-gray-800 bg-opacity-20 '>
         
       <div className='topBar-wrapper h-full py-0 px-[20px] flex justify-between items-center '>
 

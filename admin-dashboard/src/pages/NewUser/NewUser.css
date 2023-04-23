@@ -14,8 +14,8 @@
 }
 
 .showModal{
-        right:15vh !important;
-        top:15vh !important;
+        right:10vh !important;
+        top:5vh !important;
 }
 .modal{
 box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
@@ -43,4 +43,12 @@ filter: drop-shadow(1px 1px  4px rgb(38, 255, 0));
         50%{width: 50%;}
         75%{width:75%;}
         100%{width:100%;}
+}
+
+@media screen and (max-width:780px) {
+        .showModal {
+                        right: 0 !important;
+                        top: 50px !important;
+                }
+                
 }

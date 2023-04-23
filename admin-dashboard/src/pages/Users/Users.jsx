@@ -54,7 +54,7 @@ const Users = () => {
   return (
     <>
       {userDatas && (
-    <Box sx={{ height: 600, width: "100%" }}>
+    <Box sx={{ height: 600, width: "80%" }}>
         <DataGrid
         rows={userDatas}
           columns={columns}
