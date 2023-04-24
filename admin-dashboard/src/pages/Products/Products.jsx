@@ -78,7 +78,7 @@ const Products = () => {
   ];
 
   return (
-    <div className="flex-[4] w-full">
+    <div className='flex-[4] w-full'>
       {productsData && (
         <Box sx={{ height: 600, width: "100%" }}>
           <DataGrid
@@ -97,8 +97,8 @@ const Products = () => {
       )}
       {productsData === null && (
         <div className='flex justify-center items-center flex-[4]'>
-          <img src={loadingLogo} alt='' />
-          <h1 className='text-3xl text-sky-500'>Loading Please Waite...</h1>
+          <img src={loadingLogo} alt='' className='w-[100px] h-[100px]' />
+          <h1 className='text-2xl text-sky-500'>Loading Please Waite...</h1>
         </div>
       )}
     </div>

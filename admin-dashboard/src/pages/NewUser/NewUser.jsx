@@ -66,7 +66,7 @@ const NewUser = () => {
   const [userAvatar, setUserAvatar] = useState("");
   const [userJob, setUserJob] = useState("");
   return (
-    <>
+    <div  className="flex-[4] w-full">
       {showModal && <SuccessModal />}
       {datas ? (
         <div className='formContainer flex-[4]'>
@@ -141,11 +141,11 @@ const NewUser = () => {
         </div>
       ) : (
         <div className='flex flex-[4] justify-center items-center'>
-          <img src={loadingLogo} alt='' />
-          <h1 className='text-3xl text-sky-500'>Loading Please Waite...</h1>
+          <img src={loadingLogo} alt='' className="w-[100px] h-[100px]" />
+          <h1 className='text-2xl text-sky-500'>Loading Please Waite...</h1>
         </div>
       )}
-    </>
+    </div>
   );
 };
 

@@ -50,5 +50,7 @@ filter: drop-shadow(1px 1px  4px rgb(38, 255, 0));
                         right: 0 !important;
                         top: 50px !important;
                 }
-                
+        .formContainer{
+                padding: 5px !important;
+        }
 }

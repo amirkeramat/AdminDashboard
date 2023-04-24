@@ -1,6 +1,6 @@
 import {  useRoutes,} from "react-router-dom";
 import "./App.css";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import routes from "./routes";
 import TopBar from "./components/TopBar/TopBar";
 import SideBar from "./components/SideBar/SideBar";
@@ -8,7 +8,8 @@ import { Container } from "@mui/material";
 import { xAxisData, newUsers, transactions, userRows, products } from "./datas";
 import supabase from "./config/supabaseClient";
 function App() {
-  let router = useRoutes(routes);
+  let router = useRoutes(routes); 
+ 
     //  useEffect(() => {
     //    const sendData = async () => {
     //      const { error } = await supabase.from("users").insert(userRows);
@@ -21,10 +22,10 @@ function App() {
   
   return (
     <Container>
-      <div className='App'>
+      <div  className='App'>
         <TopBar />
         <div className='flex justify-between mt-[10px] relative'>
-          <SideBar />
+          <SideBar/>
           {router}
         </div>
       </div>

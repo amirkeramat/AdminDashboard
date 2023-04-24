@@ -12,3 +12,13 @@
     width: 100%;
     padding: 5px;
 }
+@media screen and (max-width:780px) {
+    .showModal {
+        right: 0 !important;
+        top: 50px !important;
+    }
+
+    .newProject-wrapper {
+        padding: 5px !important;
+    }
+}

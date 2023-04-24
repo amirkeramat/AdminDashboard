@@ -52,31 +52,31 @@ const Users = () => {
     setUserDatas(userDatas.filter(user=>user.user_id != userId ))
   }
   return (
-    <div className="flex-[4] w-full">
+    <div className='flex-[4] w-full'>
       {userDatas && (
-    <Box sx={{ height: 600, width: "100%" }}>
-        <DataGrid
-        rows={userDatas}
-          columns={columns}
-          initialState={{
-            pagination: {
-              paginationModel: {
-                pageSize:4,
+        <Box sx={{ height: 600, width: "100%" }}>
+          <DataGrid
+            rows={userDatas}
+            columns={columns}
+            initialState={{
+              pagination: {
+                paginationModel: {
+                  pageSize: 4,
+                },
               },
-            },
-          }}
-          pageSizeOptions={[5]}
-          disableRowSelectionOnClick
+            }}
+            pageSizeOptions={[5]}
+            disableRowSelectionOnClick
           />
-          </Box>
+        </Box>
       )}
       {userDatas === null && (
-        <div className="flex justify-center items-center flex-[4]">
-          <img src={loadingLogo} alt="" />
-          <h1 className="text-3xl text-sky-500">Loading Please Waite...</h1>
+        <div className='flex justify-center items-center flex-[4]'>
+          <img src={loadingLogo} alt='' className='w-[100px] h-[100px]' />
+          <h1 className='text-2xl text-sky-500'>Loading Please Waite...</h1>
         </div>
       )}
-        </div>
+    </div>
   );
 };
 
