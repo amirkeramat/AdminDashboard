@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./SideBar.css";
-
+import { ToggleContext } from "../../Context/Toggle";
 import {
   LineStyleIcon,
   TimelineIcon,
@@ -20,15 +20,11 @@ import {
 import { Link } from "react-router-dom";
 
 const SideBar = () => {
-  const [toggle, setToggle] = useState(false);
+  // const contextToggle = useContext(ToggleContext);
+  const {toggle, setToggle} = useContext(ToggleContext);
 
   return (
-    <>
-      <div
-        onClick={() => setToggle((prv) => !prv)}
-        className=' fixed bg-gray-800 z-20   top-0  h-[50px] flex items-center cursor-pointer lg:hidden'>
-        <MenuIcon className='text-white' />
-      </div>
+     
       <div
         className={`side-bar overflow-y-auto bg-gray-100 fixed lg:sticky top-[50px] transition-all  z-10 flex-1 md:h-screen
         ${toggle ? "left-0" : "-left-[200px]"}`}>
@@ -148,7 +144,6 @@ const SideBar = () => {
           </div>
         </div>
       </div>
-    </>
   );
 };
 
