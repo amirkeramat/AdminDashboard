@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import "./SideBar.css";
-import { ToggleContext } from "../../Context/Toggle";
+import {ToggleContext}  from "../../Context/Toggle";
 import {
   LineStyleIcon,
   TimelineIcon,

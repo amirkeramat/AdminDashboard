@@ -2,7 +2,7 @@ import React, {useContext} from "react";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import LanguageIcon from "@mui/icons-material/Language";
 import SettingsIcon from "@mui/icons-material/Settings";
-import { ToggleContext } from "../../Context/Toggle";
+import {ToggleContext} from "../../Context/Toggle";
 import { MenuIcon ,CloseIcon } from "../../icons";
 const TopBar = () => {
     const { toggle, setToggle } = useContext(ToggleContext);

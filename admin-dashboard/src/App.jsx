@@ -6,14 +6,10 @@ import TopBar from "./components/TopBar/TopBar";
 import SideBar from "./components/SideBar/SideBar";
 import { Container } from "@mui/material";
 import { xAxisData, newUsers, transactions, userRows, products } from "./datas";
-import { ToggleContext } from "./Context/Toggle";
+import ToggleContextProvider from "./Context/Toggle";
 import supabase from "./config/supabaseClient";
 function App() {
   let router = useRoutes(routes);
-  const [toggle, setToggle] = useState(false);
-  const value = useMemo(() =>({
-    toggle, setToggle})
-  , [toggle, setToggle]);
 
   //  useEffect(() => {
   //    const sendData = async () => {
@@ -26,7 +22,7 @@ function App() {
   //  }, []);
 
   return (
-    <ToggleContext.Provider value={value}>
+    <ToggleContextProvider>
       <Container>
         <div className='App'>
           <TopBar />
@@ -36,7 +32,7 @@ function App() {
           </div>
         </div>
       </Container>
-    </ToggleContext.Provider>
+    </ToggleContextProvider>
   );
 }
 
